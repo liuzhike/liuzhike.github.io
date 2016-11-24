@@ -1,2 +1,2 @@
-# myResume
-通过不断学习实践, 设计制作属于自己的个人网页简历
+# liuzhike.github.io
+hello word
