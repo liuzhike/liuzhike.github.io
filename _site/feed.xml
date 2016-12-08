@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>开始并完成一件事, 比做好它更重要. 因为只要开始了, 你就有机会把它做得更好.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 08 Dec 2016 22:35:41 +0800</pubDate>
+    <lastBuildDate>Thu, 08 Dec 2016 22:35:41 +0800</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>less学习笔记</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#less是什么&quot; id=&quot;markdown-toc-less是什么&quot;&gt;less是什么&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#使用less&quot; id=&quot;markdown-toc-使用less&quot;&gt;使用less&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#声明文档格式&quot; id=&quot;markdown-toc-声明文档格式&quot;&gt;声明文档格式&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#注释&quot; id=&quot;markdown-toc-注释&quot;&gt;注释&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#变量&quot; id=&quot;markdown-toc-变量&quot;&gt;变量&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#混合&quot; id=&quot;markdown-toc-混合&quot;&gt;混合&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#默认带值&quot; id=&quot;markdown-toc-默认带值&quot;&gt;默认带值:&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#匹配模式&quot; id=&quot;markdown-toc-匹配模式&quot;&gt;匹配模式&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#匹配模式-定位&quot; id=&quot;markdown-toc-匹配模式-定位&quot;&gt;匹配模式-定位&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#运算&quot; id=&quot;markdown-toc-运算&quot;&gt;运算&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#嵌套规则&quot; id=&quot;markdown-toc-嵌套规则&quot;&gt;嵌套规则&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#arguments&quot; id=&quot;markdown-toc-arguments&quot;&gt;@arguments&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#避免编译&quot; id=&quot;markdown-toc-避免编译&quot;&gt;避免编译&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#important&quot; id=&quot;markdown-toc-important&quot;&gt;!important&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;less是什么&quot;&gt;less是什么&lt;/h1&gt;
+&lt;p&gt;Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。&lt;/p&gt;
+
+&lt;p&gt;Less 可以运行在 Node、浏览器和 Rhino 平台上。网上有很多第三方工具帮助你编译 Less 源码。&lt;/p&gt;
+
+&lt;h1 id=&quot;使用less&quot;&gt;使用less&lt;/h1&gt;
+
+&lt;p&gt;Less 可以通过 npm 在命令行上运行；在浏览器上作为脚本文件下载；或者集成在广大的第三方工具内。请参考 &lt;a href=&quot;http://less.bootcss.com/usage/&quot;&gt;多种用法&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;这里推荐使用的是一款国产的开源预处理语言图形编译工具Koala, 因为是有中文版而且使用起来简单,Koala是一个开源的预处理语言图形编译工具，目前已支持Less、Sass、Compass与CoffeeScript。&lt;/p&gt;
+
+&lt;p&gt;在&lt;a href=&quot;http://koala-app.com/index-zh.html&quot;&gt;Koala官网&lt;/a&gt;根据你的系统平台下载对应的版本。Linux系统要求已安装好ruby运行环境。&lt;/p&gt;
+
+&lt;p&gt;其他配置使用注意事项等等,去&lt;a href=&quot;http://koala-app.com/index-zh.html&quot;&gt;Koala官网&lt;/a&gt;查看相关文档, 都有很详细说明, 这里主要记录学习less的语法.&lt;/p&gt;
+
+&lt;h1 id=&quot;声明文档格式&quot;&gt;声明文档格式&lt;/h1&gt;
+
+&lt;p&gt;在less文件顶部声明&lt;code class=&quot;highlighter-rouge&quot;&gt;@charset &quot;utf8&quot;;&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;注释&quot;&gt;注释&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;/* 我是注释 */&lt;/code&gt; 在less文件和css文件中都会显示&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;// 我是注释&lt;/code&gt; 不会在css文件中显示, 在less中显示&lt;/p&gt;
+
+&lt;h1 id=&quot;变量&quot;&gt;变量&lt;/h1&gt;
+
+&lt;p&gt;less中声明变量必须使用@开头, 例如&lt;code class=&quot;highlighter-rouge&quot;&gt;@变量名: 值;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+@test_width:300px;
+.box {
+	width:@test_width;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后 :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.box {
+	width: 300px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;混合&quot;&gt;混合&lt;/h1&gt;
+
+&lt;p&gt;我理解为把之前声明过的样式当做变量使用, 可提高代码复用, 提升效率.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.box1 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	}
+	
+.box2 {
+	.box;  //代替了类名为box1的全部样式声明
+	margin: 10px;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后 :&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.box1 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	}
+	
+.box2 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	margin: 10px;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;默认带值&quot;&gt;默认带值:&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.border(@border_width:10px) { //如声明了10px, 那么没传参数的话默认显示就是10px
+	border: solid pink @border_width;
+	}
+.box1 {
+	.border(); //没有传参数
+	.border(30px); //传入了参数
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.box1 {
+	border: solid pink 10px; //显示默认值
+	border: solid pink 30px; //显示传入参数的值
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;举个减少代码量的栗子,一些css3属性要做兼容, 用的多的样式用混合之后就轻松了.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.border_radius(@radius:5px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	}
+	
+.box1 {
+	.border_radius();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.box1 {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;其他地方要用到不同的圆角弧度, 只需在&lt;code class=&quot;highlighter-rouge&quot;&gt;.border_radius();&lt;/code&gt;中传入需要的值就OK&lt;/p&gt;
+
+&lt;h1 id=&quot;匹配模式&quot;&gt;匹配模式&lt;/h1&gt;
+
+&lt;p&gt;在使用的时候传入事先定义好声明的值就可以了, 举个栗子, 遇到用css写三角形的情况, 用匹配模式-匹配三角形, 只需传入方向和宽度.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+    //声明上右下左四个方向的三角
+.triangle(top,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent transparent @c transparent;
+	border-style: dashed dashed solid dashed;
+	}
+.triangle(right,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent transparent transparent @c;
+	border-style: dashed dashed solid dashed;
+	}
+.triangle(left,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent @c transparent transparent;
+	border-style: dashed solid dashed dashed;
+	}
+
+.triangle(bottom,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: @c transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	}
+//无论选择上面哪一个, 始终会把下面这个表达式里的声明带上	
+.triangle(@_.@w:5px.@c:#ccc){
+	width:0;
+	height:0;
+	overflow:hidden;	
+
+.sanjiao {
+	.triangle(bottom, 100px); //匹配传入的参数, 不传参数会显示默认的
+	}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.sanjiao {
+	border-width:100px;
+	border-color: #cccccc transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	width:0;
+	height:0;
+	overflow: hidden;
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;匹配模式-定位&quot;&gt;匹配模式-定位&lt;/h3&gt;
+&lt;p&gt;一个使用匹配模式, 匹配定位的例子.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.pos(r) {
+	position: relative;
+	}
+.pos(a) {
+	position: absolute;
+	}
+.pos(f) {
+	position: fixed;
+	}
+	
+.box1 {
+	width:300px;
+	height:300px;
+	background-color: #ccc;
+	.pos(r); //传入需要匹配的参数
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.box1 {
+	width:300px;
+	height:300px;
+	background-color: #ccc;
+	position: relative;
+	}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;运算&quot;&gt;运算&lt;/h1&gt;
+
+&lt;p&gt;在less中的运算, 任何数字, 颜色,或者变量都可以参与运算&lt;code class=&quot;highlighter-rouge&quot;&gt;+ - * /&lt;/code&gt;, 运算应该包裹在括号中.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+@test_width:300px;
+.box {
+	width: (@test_width - 20)*5; //先减后乘
+	color: #ccc - 10; //用得少
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.box {
+	width: 1400px; //运算后的结果
+	color: c2c2c2; //颜色会变淡
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;嵌套规则&quot;&gt;嵌套规则&lt;/h1&gt;
+
+&lt;p&gt;和写HTML代码类似, 直接上代码:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//html文件
+&amp;lt;ul class='list'&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;这是一段测试文字&amp;lt;/a&amp;gt;&amp;lt;span&amp;gt;2016-12-06&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;这是一段测试文字&amp;lt;/a&amp;gt;&amp;lt;span&amp;gt;2016-12-06&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;这是一段测试文字&amp;lt;/a&amp;gt;&amp;lt;span&amp;gt;2016-12-06&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;这是一段测试文字&amp;lt;/a&amp;gt;&amp;lt;span&amp;gt;2016-12-06&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;#&quot;&amp;gt;这是一段测试文字&amp;lt;/a&amp;gt;&amp;lt;span&amp;gt;2016-12-06&amp;lt;/span&amp;gt;&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.list {
+	width:600px;
+	margin: 30px auto;
+	padding: 0;
+	list-style: none;
+	
+	li {
+		height: 30px;
+		line-height: 30px;
+		background_color: #ccc;
+		margin-bottom: 5px;
+	}
+	a {
+		float: left;
+		&amp;amp;:hover { //&amp;amp;代表的是父元素
+			color: red;
+			}
+	}
+	span {
+		float: right;
+	}
+	}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;注意其中&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;代表的是父元素&lt;/strong&gt;,编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.list {
+	width:600px;
+	margin: 30px auto;
+	padding: 0;
+	list-style: none;
+	}
+.list li {
+		height: 30px;
+		line-height: 30px;
+		background_color: #ccc;
+		margin-bottom: 5px;
+		}
+.list a {
+		float: left;
+		}
+.list span {
+		float: right;
+		}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;arguments&quot;&gt;@arguments&lt;/h1&gt;
+
+&lt;p&gt;类似于形参, 代替多个值, 编译后的值为传入的实参, 如没有传参,则编译为默认值.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.border(@w:30px,@c: yellow,@xx:solid) {
+	border: @arguments; //可代替上面括号内三个参数
+
+.box {
+	.border(70,red,dashed); //传入你需要的参数用逗号分隔, 不传表示默认
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.box {
+	border: 70px #ff0000 dashed;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;避免编译&quot;&gt;避免编译&lt;/h1&gt;
+
+&lt;p&gt;有时候我们需要输出一些不正确的css语法或者使用一些less不认识的专有语法, 要输出这样的值用&lt;code class=&quot;highlighter-rouge&quot;&gt;''/&quot;&quot;&lt;/code&gt;包裹, 然后再前面加上&lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;
+例如&lt;code class=&quot;highlighter-rouge&quot;&gt;width:~'calc(300px - 30px)';&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.box {
+	width: calc(300px - 30px);
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//css文件
+.box {
+	width: calc(300px - 30px);
+	}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;这样不需要编译的时候, 也可以很好的解决.&lt;/p&gt;
+
+&lt;h1 id=&quot;important&quot;&gt;!important&lt;/h1&gt;
+
+&lt;p&gt;作用是增加优先级, 一般不用, 影响性能.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//less文件
+.border_radius(@radius:5px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	}
+	
+.box1 {
+	.border_radius() !important; //添加了!important
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;编译成css文件之后:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.box1 {
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Thu, 08 Dec 2016 01:08:00 +0800</pubDate>
+        <link>http://localhost:4000/%E5%89%8D%E7%AB%AF%E4%B9%8B%E8%B7%AF/2016/12/08/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</link>
+        <guid isPermaLink="true">http://localhost:4000/%E5%89%8D%E7%AB%AF%E4%B9%8B%E8%B7%AF/2016/12/08/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html</guid>
+        
+        <category>学习笔记</category>
+        
+        
+        <category>前端之路</category>
+        
+      </item>
+    
+      <item>
+        <title>抽烟从入门到放弃</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#入门&quot; id=&quot;markdown-toc-入门&quot;&gt;入门&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#精通&quot; id=&quot;markdown-toc-精通&quot;&gt;精通&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#放弃&quot; id=&quot;markdown-toc-放弃&quot;&gt;放弃&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#三个原因&quot; id=&quot;markdown-toc-三个原因&quot;&gt;三个原因&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#一个环境&quot; id=&quot;markdown-toc-一个环境&quot;&gt;一个环境&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#反思&quot; id=&quot;markdown-toc-反思&quot;&gt;反思&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2478712-46ed3c7003c701e7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;图片选自网络&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;掐指一算我抽烟好像抽了七年, 从07年一直到14年, 俗话说: ‘ 七年就是一辈子 ‘, 感情我这是抽了一辈子了啊.  现在已经戒烟两年多了, 不抽感觉也很好, 甚至现在有点讨厌烟的味道.&lt;/p&gt;
+
+&lt;p&gt;很多人说戒不掉, 只是你没找到方法, 而且还要适当的环境, 还有一个发生在身边的案例. 我爷爷起码30+年以上的老烟枪, 小时候记得经常叫我放学回家的时候帮他带一条&lt;strong&gt;相思鸟&lt;/strong&gt;, 不出三天就抽完, 估计平均一天三到四包, 而且主要基本上都是他自己一个人抽, 这抽烟量真的吓人,奶奶, 妈妈说了无数次叫他戒没有戒, 一直到去年病了一场, 彻底戒掉了, 现在不抽身体好多了. 废话不多说回归正题, 接下来讲讲我是如何从抽烟入门到放弃!&lt;/p&gt;
+
+&lt;h1 id=&quot;入门&quot;&gt;入门&lt;/h1&gt;
+
+&lt;p&gt;具体是什么时候怎么开始抽烟我也忘记了, 印象中只记得大概是初二的时候. 当时我读的初中也算是我们那里比较好的初中了, 离家里也有几十里路, 所以一直都是住校. 实际上我是从小学六年级就开始住校了, 所以也比较习惯, 每个月放一次月假, 月假2天, 因此更多的时间都是和学校同学在一起, 此举算是成功的造就了干一些家里人不准干的事情的环境, 虽然学校老师也管但是毕竟不会天天跟着你.&lt;/p&gt;
+
+&lt;p&gt;大家都知道, 越是禁止的事情越是有吸引力, 当时看到别人抽烟, 说来一根吧, 想看看抽烟到底是什么味道, 看到别人抽很好奇, 好奇害死猫啊, 从此跟着一起抽烟, 然而好景不长, 由于学校管得比较严的, 终于有一次躲到厕所抽的时候被老师抓到了, 被叫了家长去学校, 被爸爸严厉训了一顿, 不过这点挫折并没有打断我的抽烟路, 还是在学校躲躲藏藏的抽. 少年时有点叛逆的心理, 然后因为看到爸爸, 爷爷都抽, 而且觉得自己抽烟又没有上瘾, 当时是真没上瘾. 经常玩的几个同学都抽, 也当抽着玩. 这样算是入门了, 而且一抽就是七年.&lt;/p&gt;
+
+&lt;h1 id=&quot;精通&quot;&gt;精通&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;我亦无他, 唯手熟尔.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;放弃&quot;&gt;放弃&lt;/h1&gt;
+
+&lt;p&gt;到14年年底的时候, 抽了七年的烟, 这时候抽烟早就上瘾了, 没烟抽的时候一根烟好几个人抽, 还捡过自己以前抽过的烟头, 当时不抽的时候真的会很难受, 到处找烟抽, 到底是为什么我会戒掉了? 是怎么戒掉的呢?&lt;/p&gt;
+
+&lt;h3 id=&quot;三个原因&quot;&gt;三个原因&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;可能抽烟抽多了, 自己抽烟的时候就老是想吐痰, 而且一直吐不停, 还恶心干呕, 觉得这样很难受. 从心里想戒掉他. 比例占45%.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当时有个很喜欢的女朋友, 女朋友不喜欢闻烟的味道, 所以就也决定不抽了. 比例占40%.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;家里人也不让抽, 由于经常在外面没有经常回家, 所以家里人甚至不知道我抽了好长时间了, 然后在家也是躲着抽. 虽然不怎么听家里话, 但是本质上还是个好孩纸嘛. 不想让家人操心. 比例占15%.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;一个环境&quot;&gt;一个环境&lt;/h3&gt;
+&lt;p&gt;我有了三个重大的原因想戒掉他, 但是单单只是有原因和有坚定的信念还是不够的, 还需要一个很重要的东西, 此时此刻需要的是一个环境.&lt;/p&gt;
+
+&lt;p&gt;一个不会有人发烟给你抽, 然后身边又没有什么抽烟人的环境, 我能成功的戒掉很大一个因素就是环境, 试想着就算一个人的信念再怎么坚定, 天天身边都是老烟枪给你发烟,在你身边抽, 你怎么戒? 就算你叫他们不发给你抽, 他们想帮你你一把听进去了, 难道你还能不让他们抽吗? 亲近点的人可能可以不让他在你面前抽, 关系没那么近的呢? 所以很多人戒烟不成功的原因大概是没有这样的环境吧, 其实就算没有这种环境,自己也可以主动营造出类似这种环境, 现在很多地方都不允许吸烟, 比如地铁, 办公室,等等, 要想营造这种环境相对来说还是没那么难的. 只是看你想不想戒.&lt;/p&gt;
+
+&lt;p&gt;有了这样一个环境和想要戒掉的坚定信念, 戒掉只是时间问题了, 记得刚开始的时候, 有时候我甚至是拿起烟放到嘴巴上了, 准备点火的时候挣扎了一下, 最终被还是被自己的意志战胜了, 立即丢掉. 慢慢的抗过了一段时间, 就适应了, 这过程虽然很难, 但是结果却是令人喜悦的.&lt;/p&gt;
+
+&lt;h1 id=&quot;反思&quot;&gt;反思&lt;/h1&gt;
+
+&lt;p&gt;从戒烟的历程反思一下, 发现想要戒掉一个坏的习惯也可以用同样的套路, 先列出这个坏习惯给你带来的痛苦, 给你带来的危害, 让你从心里讨厌他, 然后改掉之会给你带来什么好处, 让自己愉快的去执行, 之后就是要营造为了改掉这个坏习惯的环境了, 比如注意力容易分心, 带来的坏处短期来看是影响工作效率, 长期来看会浪费很多的时间, 在这个时间就是金钱的社会里, 这是很重要的. 改掉之后的好处是什么呢, 工作效率大大提高, 有时间去做其他自己想做的事情, 有更多的时间来学习, 不断提升, 使自己更优秀, 这样一想好处还真是多啊, 想想都有感觉了吧. 之后就是为了改变这个坏习惯营造环境, 把手机软件的消息推送全部关闭, 或者把手机静音反过来盖在桌子上, 带上耳机隔绝外界因素等等这些措施.然后认真的去执行, 到最终你会发现, 其实也不是很难嘛.&lt;/p&gt;
+
+&lt;p&gt;到最后好像又变成鸡汤了, 把自己亲身经历的事情慢慢讲成鸡汤, 也是没谁了, 可能是鸡汤喝多了后遗症吧, 这世界充满各种诱惑, 只有不断挣扎, 才会有所成长. 今天我又挣扎了,你呢? 共勉.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;在不断挣扎成长的道路上, 相信我你并不孤独.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 04 Dec 2016 01:08:00 +0800</pubDate>
+        <link>http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/12/04/%E6%8A%BD%E7%83%9F%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83.html</link>
+        <guid isPermaLink="true">http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/12/04/%E6%8A%BD%E7%83%9F%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83.html</guid>
+        
+        <category>随笔</category>
+        
+        
+        <category>谈天说地</category>
+        
+      </item>
+    
+      <item>
+        <title>总有那么几个人, 一直记在心上</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#回忆&quot; id=&quot;markdown-toc-回忆&quot;&gt;回忆&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#在深圳的日子&quot; id=&quot;markdown-toc-在深圳的日子&quot;&gt;在深圳的日子&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#回到现实&quot; id=&quot;markdown-toc-回到现实&quot;&gt;回到现实&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://upload-images.jianshu.io/upload_images/2478712-68e3614346ab2c79.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;配图选自网络&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;回忆&quot;&gt;回忆&lt;/h1&gt;
+
+&lt;p&gt;有时候会突然想起以前的生活, 然后跟现在的生活做比较, 改变了那些地方, 使我现在的生活有哪些不同. 环境在变, 思维在变, 唯独有些事情觉得一直没变过.&lt;/p&gt;
+
+&lt;p&gt;比如, 朋友的情谊, 这里说的只是特别的那几个, 这几个朋友虽然没有经常联系, 但是每当说起话来还是那么的亲切, 不会去客套, 没有利益, 没有勾心斗角, 会主动去为对方付出, 你清楚的知道他是什么样的为人, 他也知道你是什么样的为人.&lt;/p&gt;
+
+&lt;p&gt;我一直是一个很重感情的人, 总是会记住别人对我的好, 所以在我的脑海中一般都是别人的优点, 从而没有去看自己身上的优点, 这导致从小到大一直都有点过分谦虚, 说白了就是有点自卑. 这样的好处就是从小人缘不错, 别人都愿意跟你交朋友, 性情温和, 待人友善, 但是朋友总是会有那么几个玩得很好的, 不可能和所有人关系一样的好, 而且是每个阶段都会有那么几个, 我要说的也就是那么几个人. 说起那些人就能够回忆起现在想想即有趣又快乐的的事情, 举个例子, 假如想到老陈, 就会想起之前在海南和深圳的生活, 讲讲在深圳的日子吧.&lt;/p&gt;
+
+&lt;h1 id=&quot;在深圳的日子&quot;&gt;在深圳的日子&lt;/h1&gt;
+
+&lt;p&gt;15年和老陈在深圳找了份工作, 每天早上九点上班, 十点下班, 每个月休息不超过两天, 虽然看起来很努力, 但是工作业绩还是不好,  所以也只是&lt;strong&gt;看起来很努力&lt;/strong&gt;而已, 生活压力慢慢加大. 当时我们俩租了个两室一厅的农民房, 两个大男人租两室一厅的房子, 也是没谁了.  每天我们一回到家就为了一点鸡毛小事斗嘴, 分配谁搞卫生, 谁做饭(一般是我做),谁洗衣服, 当时我们俩的衣服是轮流洗的,  一人一天来, 每次他一句你比我大一点, 就不能照顾一下小的嘛! 顿时心软,  多做点就多做点吧, 想起一句老话&lt;strong&gt;吃亏是福&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;平时吃饭他这个人要吃肉, 一天不吃都不行, 我是有点肉味就可以了的, 所以每天我们买差不多一斤肉, 而且我们每餐都要把饭菜吃完, 不留剩的. 我本来打算吃一点的, 他倒好, 还真是公平,饭菜硬是一人一半平均分配, 可怜我长了好几斤肉. 还有就是早上吃早餐, 去沙县小吃买一份饺子两个人吃, 每次两个人都不愿意多吃一个,当时真是吃不下.还有晚上一般下班回去还弄个宵夜吃, 买两瓶啤酒, 买点花生米, 再来点辣条, 这也是我们俩平时最丰富的活动了, 一起喝着酒聊着天, 但是一点都不让省心的是, 他每次喝点就说喝多了然后躺床上去了, 剩下的一片狼藉我起身简单的收拾收拾, 有时候干脆也不管了直接睡下. 这样说好像把自己夸得太好了, 哈哈, 想想我跟他的事情还真是说也说不完, 太多太多了.&lt;/p&gt;
+
+&lt;h1 id=&quot;回到现实&quot;&gt;回到现实&lt;/h1&gt;
+
+&lt;p&gt;直到今年, 我来到了北京, 他还在深圳, 我们各自努力奋斗, 联系也少了, 但是还是隔一段时间联系一下, 我觉得这份感情一直都在, 还有几个人也是, &lt;strong&gt;虽然不常联系, 我相信, 以后不管怎么样, 总有那么几个人, 一直记在心上&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;想起一个人就像点燃了导火索一样, 一旦点燃, 记忆一团一团的炸开, 炸开后的硝烟久久不能飘散 .而且这种导火索还是一根接着一根.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;所以回忆其实是很费注意力的, 还是不要轻易回忆好, 等下次相聚或者闲下来的时候在回忆吧, 因为现在还有更重要的事情要做, &lt;strong&gt;通过积累, 逐渐成长&lt;/strong&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 27 Nov 2016 20:05:00 +0800</pubDate>
+        <link>http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/11/27/%E6%80%BB%E6%9C%89%E9%82%A3%E4%B9%88%E5%87%A0%E4%B8%AA%E4%BA%BA%E4%B8%80%E7%9B%B4%E5%9C%A8%E5%BF%83%E4%B8%8A.html</link>
+        <guid isPermaLink="true">http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/11/27/%E6%80%BB%E6%9C%89%E9%82%A3%E4%B9%88%E5%87%A0%E4%B8%AA%E4%BA%BA%E4%B8%80%E7%9B%B4%E5%9C%A8%E5%BF%83%E4%B8%8A.html</guid>
+        
+        <category>随笔</category>
+        
+        
+        <category>谈天说地</category>
+        
+      </item>
+    
+      <item>
+        <title>不管怎样, 只要开始就好</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#顿悟&quot; id=&quot;markdown-toc-顿悟&quot;&gt;顿悟&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#写作目的&quot; id=&quot;markdown-toc-写作目的&quot;&gt;写作目的&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#写点什么&quot; id=&quot;markdown-toc-写点什么&quot;&gt;写点什么&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#为什么没有开始&quot; id=&quot;markdown-toc-为什么没有开始&quot;&gt;为什么没有开始&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#反思&quot; id=&quot;markdown-toc-反思&quot;&gt;反思&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;顿悟&quot;&gt;顿悟&lt;/h1&gt;
+
+&lt;p&gt;近一段时间, 因为在哥哥的耳濡目染之下开始有了想自己写点什么, 记录一下自己的思想的觉悟, 但总是以各种理由而宣告失败, 今天早上突然顿悟了.&lt;/p&gt;
+
+&lt;p&gt;因为我的性格有点优柔寡断(近期一直在改), 所以一直在纠结和犹豫我到底该写点什么, 或者说是记录点什么, 写的不好怎么办, 会不会被人嘲笑. 这种感觉持续了一段时间.&lt;/p&gt;
+
+&lt;p&gt;就在今天早上, 当我我决定开始敲打着键盘写下我的第一篇文章时候, 重点是当我在打开简书编辑器的时候我也没有决定好要写些什么东西,  突然我想到别人会不会也会像我一样想写点东西但是不知道怎么开始而烦恼呢? 然后顺着思路想我写文章的真正目的是什么呢? 想到这里个我决定记录和分享一下此刻的感悟. 就这样, 不知不觉的就有了思路, 开始写起来了, &lt;strong&gt;虽然我的文笔很生疏, 甚至标点符号都用不好, 但是这些都不重要, 重要的是我知道写什么了, 而且已经开始写起来了.写下我的第一篇文章.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;写作目的&quot;&gt;写作目的&lt;/h1&gt;
+
+&lt;p&gt;我为什么要写作呢, 是想走向职业作家, 还是想成为网络作家出名火一把呢, 还是想通过写作赚点稿费.&lt;/p&gt;
+
+&lt;p&gt;我仔细想了想好像这些都不是, 我要写作的目的仅仅是是想要记录一下自己的思想, 提高自己的内涵, 不断积累让自己成长而已. 突然就好像顿悟了, 之前一直纠结的问题都迎刃而解了.&lt;/p&gt;
+
+&lt;h1 id=&quot;写点什么&quot;&gt;写点什么&lt;/h1&gt;
+
+&lt;p&gt;**既然我写作的目的不是为了取悦他人和工作所需, 那么我干嘛要在乎写什么, 写多少, 写的好与不好. **&lt;/p&gt;
+
+&lt;p&gt;当什么都不在乎了, 就没有那么多束缚了, 我自由了, 想写什么就写什么, 可以记录我的学习, 我的生活, 我的工作, 我任意想表达的东西, 因为我只是写给我自己的,当然如果同时能够给和我一样想记录点什么但还没开始的人一些灵感, 我也是很喜闻乐见的.&lt;/p&gt;
+
+&lt;p&gt;想通一件事的感觉很好, 好像是练功突破了当前境界一样豁然开朗, 明白了自己写作的真正意义.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;人活着, 总要做些什么.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这句话是我之前一个室友说的, 印象深刻, 而我还想在世界留下点什么, 证明我来过这个世界.&lt;/p&gt;
+
+&lt;h1 id=&quot;为什么没有开始&quot;&gt;为什么没有开始&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;因为拖延, 没有立即去执行, 拖延真的是我们生活当中的头等大敌.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;拒绝拖延, 立即执行.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;比如计划一周去跑一次步, 周一的时候想着才第一天, 后面还有六天呢不急. 到了周二, 天有不测风云, 哎呀! 今天有点雾霾不能长时间户外运动, 明天天气好了再去吧.  结果周三雾霾更大了, 囧,  没事这时候安慰自己这周还才过去还不到一半. 周四, 今天工作好累啊, 宝宝不想动.  第五天, 马上周末了公司加班, 很晚下班,周末在跑吧. 周六了, 好不容易到周末, 好好睡个懒觉, 一天都窝在家里, 周日再去吧, 到了周日终于去跑了.&lt;/p&gt;
+
+&lt;p&gt;还有另一种情况,周日有事或者又找借口想着下次补回来就行了, 结果又没有去, 一拖再拖, 不仅每天惦记着这事, 事后没完成还有罪恶感.&lt;/p&gt;
+
+&lt;p&gt;如此看来, 制定好的计划最好是立即执行, 不能立即执行的事也好尽早的去做, 不要拖延, 早点做完后面的日子没有这件事惦记, 不用占用大脑内存也会感觉自己时间多出来了, 这时你还可以做些别的, 就像是剩余的时间是你赚到的一样.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;种一棵树最好的时间是十年前, 然后是现在.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;反思&quot;&gt;反思&lt;/h1&gt;
+
+&lt;p&gt;反思我今天的写作, 如若今天早上我没有下定决心一定要写点东西出来, 并且立即去执行, 也不会突然想通透我写作真正目的, 不会知道我要写些什么, 也就不可能有这篇感想的存在, 虽然预计早上花两个小时写完, 但是到最后写完已经是吃午饭的时间了, 因此打乱了今天的计划, 但我知道,走出这一步的意义更为重大, 希望大家一起学习, 共勉.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;开始一并完成一件事, 比做好它更为重要.
+因为只要开始了, 你就有机会把它做得更好.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sun, 20 Nov 2016 01:08:00 +0800</pubDate>
+        <link>http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/11/20/%E4%B8%8D%E7%AE%A1%E6%80%8E%E4%B9%88%E6%A0%B7%E5%8F%AA%E8%A6%81%E5%BC%80%E5%A7%8B%E5%B0%B1%E5%A5%BD.html</link>
+        <guid isPermaLink="true">http://localhost:4000/%E8%B0%88%E5%A4%A9%E8%AF%B4%E5%9C%B0/2016/11/20/%E4%B8%8D%E7%AE%A1%E6%80%8E%E4%B9%88%E6%A0%B7%E5%8F%AA%E8%A6%81%E5%BC%80%E5%A7%8B%E5%B0%B1%E5%A5%BD.html</guid>
+        
+        <category>随笔</category>
+        
+        
+        <category>谈天说地</category>
+        
+      </item>
+    
+  </channel>
+</rss>

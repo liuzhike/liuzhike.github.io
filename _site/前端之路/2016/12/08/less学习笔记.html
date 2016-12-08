@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>less学习笔记</title>
+
+	<link rel="shortcut icon" href="/styles/images/favicon.jpg">
+	<link rel="icon" href="/styles/images/favicon.jpg">
+
+	<link rel="stylesheet" href="/styles/css/index.css">
+	<link rel="stylesheet" href="/styles/css/fontawesome/css/font-awesome.min.css">
+	<link rel="canonical" href="/%E5%89%8D%E7%AB%AF%E4%B9%8B%E8%B7%AF/2016/12/08/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html">
+	<link rel="alternate" type="application/rss+xml" title="刘挚珂 - 积累与分享" href="/feed.xml">
+	
+	<meta name="description" content="刘挚珂;个人博客;三人行，必有我师焉；择其善者而从之，其不善者而改之.">
+
+	<script src="/styles/js/jquery.min.js"></script>
+	<!--[if lt IE 9]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+  	<script>
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?94be4b0f9fc5d94cc0d0415ea6761ae9";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+  	<style type="text/css">
+	  	.docs-content{
+	  		margin-bottom: 10px;
+	  	}
+  	</style>
+</head>
+
+  <body class="index">
+
+    <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="/styles/images/logo.jpg">
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">    
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/categories/">大类分解</a>
+        </li>
+        <li>
+          <a href="/tag">小类内聚</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="/donate/"><strong>打赏</strong></a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">关于<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a rel="nofollow" target="_blank" href="https://github.com/liuzhike/">Github</a></li>
+            <li><a rel="nofollow" target="_blank" href="http://www.liuzhike.com">关于作者</a></li>
+            <li><a rel="nofollow" href="/books">我的书单</a></li>
+            <li><a rel="nofollow" href="/reference">推荐博客</a></li>
+            <li><a href="/feed.xml">RSS订阅</a></li>
+            <li class="divider"></li>
+            <li><a rel="nofollow" target="_blank" href="https://github.com/luoyan35714/LessOrMore.git">本项目</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div class="docs-header" id="content">
+  <div class="container">
+  	
+  		<!--
+		    <h1>less学习笔记</h1>
+		    <p>Post on Dec 08, 2016 by <a href="/about">LiuZhiKe</a></p>
+		-->
+		    <h1>just do it</h1>
+    
+  </div>
+</div>
+    
+      
+<div class="banner">
+  <div class="container">
+  	
+    	<a href="/categories/#前端之路-ref">前端之路</a>	/
+    	<a href="/tag/#学习笔记-ref">学习笔记</a>
+    
+  </div>
+</div>
+
+    
+
+    <div class="container docs-container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar hidden-print" role="complementary">
+        <div id="navigation">
+  <h1>目录</h1>
+  <ul class="nav sidenav">
+<!--
+    
+      
+      
+      
+      
+
+      
+        <li><a href="#year_2016">2016</a>
+          <ul class="nav">
+            <li><a href="#month_2016_December">December</a></li>
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+              <li><a href="#month_2016_November">November</a></li>
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            
+          
+        
+      
+    
+      
+      
+      
+      
+
+      
+
+      
+            </ul>
+          </li>
+      
+    
+-->
+  </ul>
+</div> 
+      </div>
+    </div>
+    <div class="col-md-9" role="main">
+      <div class="panel docs-content">
+        <div class="wrapper">
+            <header class="post-header">
+              <h1 class="post-title">less学习笔记</h1>
+              <!--
+                <p class="post-meta">Dec 8, 2016</p>
+              -->
+              <div class="meta">Posted on <span class="postdate">Dec 08, 2016</span> By <a target="_blank" href="http://localhost:4000">LiuZhiKe</a></div>
+              <br />
+            </header>
+            <article class="post-content">
+              <ul id="markdown-toc">
+  <li><a href="#less是什么" id="markdown-toc-less是什么">less是什么</a></li>
+  <li><a href="#使用less" id="markdown-toc-使用less">使用less</a></li>
+  <li><a href="#声明文档格式" id="markdown-toc-声明文档格式">声明文档格式</a></li>
+  <li><a href="#注释" id="markdown-toc-注释">注释</a></li>
+  <li><a href="#变量" id="markdown-toc-变量">变量</a></li>
+  <li><a href="#混合" id="markdown-toc-混合">混合</a>    <ul>
+      <li><a href="#默认带值" id="markdown-toc-默认带值">默认带值:</a></li>
+    </ul>
+  </li>
+  <li><a href="#匹配模式" id="markdown-toc-匹配模式">匹配模式</a>    <ul>
+      <li><a href="#匹配模式-定位" id="markdown-toc-匹配模式-定位">匹配模式-定位</a></li>
+    </ul>
+  </li>
+  <li><a href="#运算" id="markdown-toc-运算">运算</a></li>
+  <li><a href="#嵌套规则" id="markdown-toc-嵌套规则">嵌套规则</a></li>
+  <li><a href="#arguments" id="markdown-toc-arguments">@arguments</a></li>
+  <li><a href="#避免编译" id="markdown-toc-避免编译">避免编译</a></li>
+  <li><a href="#important" id="markdown-toc-important">!important</a></li>
+</ul>
+
+<h1 id="less是什么">less是什么</h1>
+<p>Less 是一门 CSS 预处理语言，它扩充了 CSS 语言，增加了诸如变量、混合（mixin）、函数等功能，让 CSS 更易维护、方便制作主题、扩充。</p>
+
+<p>Less 可以运行在 Node、浏览器和 Rhino 平台上。网上有很多第三方工具帮助你编译 Less 源码。</p>
+
+<h1 id="使用less">使用less</h1>
+
+<p>Less 可以通过 npm 在命令行上运行；在浏览器上作为脚本文件下载；或者集成在广大的第三方工具内。请参考 <a href="http://less.bootcss.com/usage/">多种用法</a></p>
+
+<p>这里推荐使用的是一款国产的开源预处理语言图形编译工具Koala, 因为是有中文版而且使用起来简单,Koala是一个开源的预处理语言图形编译工具，目前已支持Less、Sass、Compass与CoffeeScript。</p>
+
+<p>在<a href="http://koala-app.com/index-zh.html">Koala官网</a>根据你的系统平台下载对应的版本。Linux系统要求已安装好ruby运行环境。</p>
+
+<p>其他配置使用注意事项等等,去<a href="http://koala-app.com/index-zh.html">Koala官网</a>查看相关文档, 都有很详细说明, 这里主要记录学习less的语法.</p>
+
+<h1 id="声明文档格式">声明文档格式</h1>
+
+<p>在less文件顶部声明<code class="highlighter-rouge">@charset "utf8";</code></p>
+
+<h1 id="注释">注释</h1>
+<p><code class="highlighter-rouge">/* 我是注释 */</code> 在less文件和css文件中都会显示<br />
+<code class="highlighter-rouge">// 我是注释</code> 不会在css文件中显示, 在less中显示</p>
+
+<h1 id="变量">变量</h1>
+
+<p>less中声明变量必须使用@开头, 例如<code class="highlighter-rouge">@变量名: 值;</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+@test_width:300px;
+.box {
+	width:@test_width;
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后 :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.box {
+	width: 300px;
+</code></pre>
+</div>
+
+<h1 id="混合">混合</h1>
+
+<p>我理解为把之前声明过的样式当做变量使用, 可提高代码复用, 提升效率.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.box1 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	}
+	
+.box2 {
+	.box;  //代替了类名为box1的全部样式声明
+	margin: 10px;
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后 :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.box1 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	}
+	
+.box2 {
+	width:300px;
+	height:300px;
+	background:#0f0;
+	margin: 10px;
+	}
+</code></pre>
+</div>
+<h3 id="默认带值">默认带值:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.border(@border_width:10px) { //如声明了10px, 那么没传参数的话默认显示就是10px
+	border: solid pink @border_width;
+	}
+.box1 {
+	.border(); //没有传参数
+	.border(30px); //传入了参数
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.box1 {
+	border: solid pink 10px; //显示默认值
+	border: solid pink 30px; //显示传入参数的值
+	}
+</code></pre>
+</div>
+<p>举个减少代码量的栗子,一些css3属性要做兼容, 用的多的样式用混合之后就轻松了.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.border_radius(@radius:5px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	}
+	
+.box1 {
+	.border_radius();
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.box1 {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+</code></pre>
+</div>
+<p>其他地方要用到不同的圆角弧度, 只需在<code class="highlighter-rouge">.border_radius();</code>中传入需要的值就OK</p>
+
+<h1 id="匹配模式">匹配模式</h1>
+
+<p>在使用的时候传入事先定义好声明的值就可以了, 举个栗子, 遇到用css写三角形的情况, 用匹配模式-匹配三角形, 只需传入方向和宽度.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+    //声明上右下左四个方向的三角
+.triangle(top,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent transparent @c transparent;
+	border-style: dashed dashed solid dashed;
+	}
+.triangle(right,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent transparent transparent @c;
+	border-style: dashed dashed solid dashed;
+	}
+.triangle(left,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: transparent @c transparent transparent;
+	border-style: dashed solid dashed dashed;
+	}
+
+.triangle(bottom,@w:5px,@c#ccc) {
+	border-width: @w;
+	border-color: @c transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	}
+//无论选择上面哪一个, 始终会把下面这个表达式里的声明带上	
+.triangle(@_.@w:5px.@c:#ccc){
+	width:0;
+	height:0;
+	overflow:hidden;	
+
+.sanjiao {
+	.triangle(bottom, 100px); //匹配传入的参数, 不传参数会显示默认的
+	}
+
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.sanjiao {
+	border-width:100px;
+	border-color: #cccccc transparent transparent transparent;
+	border-style: solid dashed dashed dashed;
+	width:0;
+	height:0;
+	overflow: hidden;
+	}
+</code></pre>
+</div>
+<h3 id="匹配模式-定位">匹配模式-定位</h3>
+<p>一个使用匹配模式, 匹配定位的例子.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.pos(r) {
+	position: relative;
+	}
+.pos(a) {
+	position: absolute;
+	}
+.pos(f) {
+	position: fixed;
+	}
+	
+.box1 {
+	width:300px;
+	height:300px;
+	background-color: #ccc;
+	.pos(r); //传入需要匹配的参数
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.box1 {
+	width:300px;
+	height:300px;
+	background-color: #ccc;
+	position: relative;
+	}
+
+</code></pre>
+</div>
+
+<h1 id="运算">运算</h1>
+
+<p>在less中的运算, 任何数字, 颜色,或者变量都可以参与运算<code class="highlighter-rouge">+ - * /</code>, 运算应该包裹在括号中.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+@test_width:300px;
+.box {
+	width: (@test_width - 20)*5; //先减后乘
+	color: #ccc - 10; //用得少
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.box {
+	width: 1400px; //运算后的结果
+	color: c2c2c2; //颜色会变淡
+	}
+</code></pre>
+</div>
+
+<h1 id="嵌套规则">嵌套规则</h1>
+
+<p>和写HTML代码类似, 直接上代码:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//html文件
+&lt;ul class='list'&gt;
+	&lt;li&gt;&lt;a href="#"&gt;这是一段测试文字&lt;/a&gt;&lt;span&gt;2016-12-06&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;这是一段测试文字&lt;/a&gt;&lt;span&gt;2016-12-06&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;这是一段测试文字&lt;/a&gt;&lt;span&gt;2016-12-06&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;这是一段测试文字&lt;/a&gt;&lt;span&gt;2016-12-06&lt;/span&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href="#"&gt;这是一段测试文字&lt;/a&gt;&lt;span&gt;2016-12-06&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+</div>
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.list {
+	width:600px;
+	margin: 30px auto;
+	padding: 0;
+	list-style: none;
+	
+	li {
+		height: 30px;
+		line-height: 30px;
+		background_color: #ccc;
+		margin-bottom: 5px;
+	}
+	a {
+		float: left;
+		&amp;:hover { //&amp;代表的是父元素
+			color: red;
+			}
+	}
+	span {
+		float: right;
+	}
+	}
+	
+</code></pre>
+</div>
+<p><strong>注意其中<code class="highlighter-rouge">&amp;</code>代表的是父元素</strong>,编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.list {
+	width:600px;
+	margin: 30px auto;
+	padding: 0;
+	list-style: none;
+	}
+.list li {
+		height: 30px;
+		line-height: 30px;
+		background_color: #ccc;
+		margin-bottom: 5px;
+		}
+.list a {
+		float: left;
+		}
+.list span {
+		float: right;
+		}
+</code></pre>
+</div>
+
+<h1 id="arguments">@arguments</h1>
+
+<p>类似于形参, 代替多个值, 编译后的值为传入的实参, 如没有传参,则编译为默认值.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.border(@w:30px,@c: yellow,@xx:solid) {
+	border: @arguments; //可代替上面括号内三个参数
+
+.box {
+	.border(70,red,dashed); //传入你需要的参数用逗号分隔, 不传表示默认
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.box {
+	border: 70px #ff0000 dashed;
+	
+</code></pre>
+</div>
+
+<h1 id="避免编译">避免编译</h1>
+
+<p>有时候我们需要输出一些不正确的css语法或者使用一些less不认识的专有语法, 要输出这样的值用<code class="highlighter-rouge">''/""</code>包裹, 然后再前面加上<code class="highlighter-rouge">~</code>
+例如<code class="highlighter-rouge">width:~'calc(300px - 30px)';</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.box {
+	width: calc(300px - 30px);
+	}
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//css文件
+.box {
+	width: calc(300px - 30px);
+	}
+</code></pre>
+</div>
+<p>这样不需要编译的时候, 也可以很好的解决.</p>
+
+<h1 id="important">!important</h1>
+
+<p>作用是增加优先级, 一般不用, 影响性能.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//less文件
+.border_radius(@radius:5px){
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	}
+	
+.box1 {
+	.border_radius() !important; //添加了!important
+</code></pre>
+</div>
+<p>编译成css文件之后:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>.box1 {
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+</code></pre>
+</div>
+
+            </article>
+        </div>
+      </div>
+      <div class="panel docs-content">
+        <article class="post-content">
+          <div class="wrapper">
+            
+
+
+  <div class="ds-thread" data-thread-key="/%E5%89%8D%E7%AB%AF%E4%B9%8B%E8%B7%AF/2016/12/08/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html" data-title="less学习笔记" data-url="http://localhost:4000/%E5%89%8D%E7%AB%AF%E4%B9%8B%E8%B7%AF/2016/12/08/less%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.html"></div>
+
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"luoyan35714"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+
+
+ 
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2016-2016 <a href="http://www.liuzhike.com"><code>LiuZhiKe</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
+
+<script src="/styles/js/jquery.min.js"></script>
+<script src="/styles/js/bootstrap.min.js"></script>
+<script src="/styles/js/holder.min.js"></script>
+<script src="/styles/js/application.js"></script>
+<script src="/styles/js/lessismore.js"></script>
+
+  </body>
+</html>
