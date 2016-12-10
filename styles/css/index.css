@@ -243,6 +243,7 @@ table {
 }
 p {
   margin: 0 0 10px;
+  line-height: 29px;
 }
 /*.lead {
   margin-bottom: @line-height-computed;
@@ -3998,6 +3999,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .breadcrumb > .active {
   color: #999999;
 }
+.breadcrumb a {
+    font-weight: 500;
+  }
+.breadcrumb span {
+  font-size: 14px;
+  color: #3d3d3d;
+}
 .pagination {
   display: inline-block;
   padding-left: 0;
@@ -6101,7 +6109,7 @@ html {
 }
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, 'Microsoft YaHei', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #333333;
   background-color: #f7f7f7;
@@ -6360,6 +6368,9 @@ hr {
   background: #fff;
   text-align: center;
   border-top: 1px solid #eeeeee;
+}
+.footer .container {
+  text-align: center;
 }
 .footer-links {
   margin: 10px 0;
@@ -6780,6 +6791,19 @@ td.visible-sm {
   td.visible-sm.visible-xs {
     display: table-cell !important;
   }
+  .docs-content {
+    padding: 1px 10px 80px 10px;
+  }
+  .breadcrumb{
+    padding:18px 15px;
+  }
+  .breadcrumb > li {
+    display: block;
+  }
+  ul{
+    padding: 0;
+  }
+
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
