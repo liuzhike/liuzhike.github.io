@@ -1,5 +1,3 @@
-
-
 ---
 layout: post
 title:  Sublime Text快捷键(mac版)
@@ -13,6 +11,8 @@ tag: 工具使用
 
 
 ![图片选自网络](http://upload-images.jianshu.io/upload_images/2478712-37785fbd75556f13.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+Sublime Text 工具是英文的, 导致菜单栏看不太懂, 索性花时间翻译总结了一下快捷键, 方便自己也方便他人. 
 
 
 ``⌘，`` 设置  
