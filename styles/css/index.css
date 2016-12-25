@@ -6138,9 +6138,7 @@ a:focus {
 }
 img {
   vertical-align: middle;
-}
-div.wrapper img{
-  width: 100%;
+   width: 100%;
 }
 .img-responsive {
   display: block;
@@ -6492,7 +6490,10 @@ hr {
   font-size: 12px;
   margin-left: 10px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 923a8e2... 添加日志
 @media (min-width: 992px) {
   .sidebar {
     display: block;
