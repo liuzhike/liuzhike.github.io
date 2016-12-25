@@ -6139,6 +6139,9 @@ a:focus {
 img {
   vertical-align: middle;
 }
+div.wrapper img{
+  width: 100%;
+}
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -6489,9 +6492,7 @@ hr {
   font-size: 12px;
   margin-left: 10px;
 }
-div.wrapper img {
-	width: 100%;
-}
+
 @media (min-width: 992px) {
   .sidebar {
     display: block;
