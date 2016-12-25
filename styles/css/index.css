@@ -6489,6 +6489,9 @@ hr {
   font-size: 12px;
   margin-left: 10px;
 }
+div.wrapper img {
+	width: 100%;
+}
 @media (min-width: 992px) {
   .sidebar {
     display: block;
